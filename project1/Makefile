@@ -1,0 +1,7 @@
+.PHONY : all clean
+
+all:
+	g++ npshell.cpp -o npshell
+
+clean:
+	rm -rf npshell.o npshell
