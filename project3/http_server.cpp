@@ -15,8 +15,8 @@
 using namespace std;
 using namespace boost::asio;
 
-string HTTPOK=" 200 OK\r\n\r\n";
-string HTTPNotFound = " 404 Not Found\r\n\r\n";
+string HTTPOK=" 200 OK\r\n";
+string HTTPNotFound = " 404 Not Found\r\n";
 io_service global_io_service;
 
 struct Envalue {
@@ -205,7 +205,7 @@ void detstr (string inp,char det,vector<string> &fin)
     } 
 };
 /*
-  cout << "HTTP/1.1 200 OK\r\n\r\n";
+  cout << "HTTP/1.1 200 OK\r\n";
   cout << "<html>\r\n";
   cout << "<head>\r\n";
   cout << "  <title>HELLO</title>\r\n";
