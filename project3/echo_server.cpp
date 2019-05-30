@@ -15,8 +15,8 @@
 using namespace std;
 using namespace boost::asio;
 
-string HTTPOK=" 200 OK\r\n\r\n";
-string HTTPNotFound = " 404 Not Found\r\n\r\n";
+string HTTPOK=" 200 OK\r\n";
+string HTTPNotFound = " 404 Not Found\r\n";
 io_service global_io_service;
 
 struct Envalue {
@@ -104,7 +104,7 @@ class EchoSession : public enable_shared_from_this<EchoSession> {
               
               global_io_service.notify_fork(io_service::fork_child);
               //cout << HTTP_Env_Value.METHOD_<<HTTPOK;
-              cout <<"HTTP/1.1 200 OK\r\n\r\n";
+              cout <<"HTTP/1.1 200 OK\r\n";
               if (execvp(getenv("REQUEST_URI"),NULL)<0) { ////+./
               /////child
                 cout << HTTP_Env_Value.METHOD_<<HTTPNotFound;                
